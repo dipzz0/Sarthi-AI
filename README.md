@@ -42,8 +42,9 @@
   - [Installation](#1-clone--install-dependencies)
   - [Environment Configuration](#2-environment-setup)
   - [Backend Setup (Bring Your Own Backend)](#3-backend-setup)
-  - [Running the App](#4-run-development-server)
-  - [Production Build](#5-build-for-production)
+  - [AI Assistant & Vision Setup](#4-ai-assistant--vision-setup-bring-your-own-ai)
+  - [Running the App](#5-run-development-server)
+  - [Production Build](#6-build-for-production)
 - [Security & Privacy](#-security--privacy)
 
 ---
@@ -253,7 +254,26 @@ create table public.complaints (
 
 ---
 
-### 4. Run Development Server
+### 4. AI Assistant & Vision Setup (Bring Your Own AI)
+
+Sarthi AI integrates intelligent multimodal assistance powered by the **Vercel AI SDK** (`ai`, `@ai-sdk/react`, `@ai-sdk/openai-compatible`):
+
+- **AI Transit Assistant & Voice Agent** ([`assistant.tsx`](src/routes/_authenticated/assistant.tsx), [`/api/chat`](src/routes/api/chat.ts)): Provides real-time transit routing, schedule lookups, multi-modal fare estimates, automated grievance drafting, and voice synthesis ([`/api/speak`](src/routes/api/speak.ts)).
+- **AI Road Vision & Hazard Detection** ([`vision.functions.ts`](src/lib/vision.functions.ts)): Analyzes camera frames to flag road potholes, bumps, and safety hazards with geolocation tagging.
+
+#### Configuration:
+Add your AI provider key to your `.env` file:
+
+```env
+# AI Gateway (for transit chat, voice synthesis & hazard vision)
+LOVABLE_API_KEY="your-ai-gateway-or-openai-compatible-key"
+```
+
+The backend gateway ([`src/lib/ai-gateway.server.ts`](src/lib/ai-gateway.server.ts)) connects to standard OpenAI-compatible completions endpoints (`/v1/chat/completions`), allowing you to hook up **OpenAI (GPT-4o / GPT-4o-mini)**, **Google Gemini (via OpenAI compatibility layer)**, or local models.
+
+---
+
+### 5. Run Development Server
 
 ```bash
 npm run dev
@@ -261,7 +281,7 @@ npm run dev
 
 Open your browser and navigate to `http://localhost:5173` to explore Sarthi AI!
 
-### 5. Build for Production
+### 6. Build for Production
 
 ```bash
 npm run build
