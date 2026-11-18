@@ -265,3 +265,13 @@ npm run preview
 - **On-Demand Sensor Permissions**: Camera, microphone, and geolocation access are requested strictly on demand and are never activated in the background.
 - **Native Web Speech Privacy**: Voice interaction relies exclusively on browser-native APIs without third-party audio recording trackers.
 - **End-to-End Encrypted Transport**: All communication between client applications and backend endpoints occurs exclusively over secure HTTPS/TLS protocols.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE) — feel free to use, modify, and build upon it.
+
+<p align="center">
+  Empowering daily commuters with intelligent urban transit & road awareness.
+</p>
