@@ -15,6 +15,17 @@
   <img src="https://img.shields.io/badge/TanStack_Router-1.168-FF4154?logo=tanstack&style=for-the-badge" alt="TanStack Router" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?logo=tailwindcss&style=for-the-badge" alt="Tailwind CSS v4" />
   <img src="https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&style=for-the-badge" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
+</p>
+
+<p align="center">
+  <a href="https://ai-sarthi.lovable.app" target="_blank">
+    <img src="https://img.shields.io/badge/%F0%9F%8C%90_Live_Demo-ai--sarthi.lovable.app-2ea44f?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" />
+  </a>
+</p>
+
+<p align="center">
+  &#128279; <strong>Live App URL:</strong> <a href="https://ai-sarthi.lovable.app" target="_blank">https://ai-sarthi.lovable.app</a>
 </p>
 
 ---
